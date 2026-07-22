@@ -86,14 +86,13 @@ h1 span{
 .bouton {
 
     text-decoration: none;
-
     color: white;
-
     border: 1px solid white;
-
     padding: 15px 30px;
-
     border-radius: 30px;
+
+    display: inline-block;
+    margin-top: 25px;
 
 }
 
@@ -138,5 +137,17 @@ h1 span{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+}
+
+.lieu{
+
+    font-size:18px;
+
+    margin-top:-10px;
+
+    margin-bottom:25px;
+
+    letter-spacing:1px;
 
 }
