@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Georgia', serif;
+body{
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -40,33 +40,45 @@ body {
 }
 
 
-.petit-titre {
+.petit-titre{
 
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
 
 }
 
 
-h1 {
-    font-size: 58px;
-    font-weight: normal;
-    line-height: 1.2;
+h1{
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:70px;
+
+    font-weight:normal;
+
+    line-height:1.2;
+
+    letter-spacing:2px;
+
+}
+
+h1 span{
+
+    color:#d4af37;
+
+    font-size:45px;
+
 }
 
 
-h1 span {
-    color: #d4af37;
-    font-size: 42px;
-    display: inline-block;
-    margin: 8px 0;
-}
+.date{
 
+    font-size:22px;
 
-.date {
-
-    font-size: 25px;
-    margin: 30px;
+    letter-spacing:2px;
 
 }
 
