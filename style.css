@@ -49,17 +49,17 @@ body {
 
 
 h1 {
-
-    font-size: 70px;
+    font-size: 58px;
     font-weight: normal;
-
+    line-height: 1.2;
 }
 
 
 h1 span {
-
     color: #d4af37;
-
+    font-size: 42px;
+    display: inline-block;
+    margin: 8px 0;
 }
 
 
