@@ -176,3 +176,71 @@ h1 span{
     letter-spacing: 1px;
     margin-top: 5px;
 }
+
+/* Écran d'ouverture */
+
+.ecran-ouverture {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/fond.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.ouverture-contenu {
+    padding: 30px;
+}
+
+.ouverture-contenu h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 65px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+#ouvrirInvitation {
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 30px;
+
+    padding: 14px 32px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#ouvrirInvitation:hover {
+    background: white;
+    color: black;
+}
+
+/* Animation de fermeture */
+
+.ecran-ouverture.fermer {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

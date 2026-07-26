@@ -26,3 +26,14 @@ function compteARebours() {
 compteARebours();
 
 setInterval(compteARebours, 1000);
+
+// Écran d'ouverture
+
+const ecranOuverture = document.getElementById("ecranOuverture");
+const boutonOuverture = document.getElementById("ouvrirInvitation");
+
+boutonOuverture.addEventListener("click", function () {
+
+    ecranOuverture.classList.add("fermer");
+
+});
