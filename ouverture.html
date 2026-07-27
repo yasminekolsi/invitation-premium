@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Invitation de mariage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-ouverture">
+
+        <div class="enveloppe">
+
+            <!-- Rabat de l'enveloppe -->
+            <div class="rabat"></div>
+
+            <!-- Lettre -->
+            <div class="lettre">
+                <div>Invitation de mariage</div>
+            </div>
+
+            <!-- Corps de l'enveloppe -->
+            <div class="corps-enveloppe"></div>
+
+        </div>
+
+        <button id="ouvrirInvitation">
+            Ouvrir l'invitation
+        </button>
+
+    </div>
+
+    <script>
+        const bouton = document.getElementById("ouvrirInvitation");
+        const enveloppe = document.querySelector(".enveloppe");
+
+        bouton.addEventListener("click", function () {
+
+            enveloppe.classList.add("ouverte");
+
+            bouton.style.opacity = "0";
+            bouton.style.pointerEvents = "none";
+
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 2500);
+
+        });
+    </script>
+
+</body>
+
+</html>
