@@ -124,3 +124,139 @@
         transform: translateY(0);
     }
 }
+
+/* =========================
+   PAGE DES MARIES
+========================= */
+
+.accueil {
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+    ),
+    url("images/fond.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+/* Animation du contenu */
+
+.contenu {
+
+    animation: apparition 2s ease;
+
+}
+
+
+/* Noms des mariés */
+
+.accueil h1 {
+
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:85px;
+
+    font-weight:normal;
+
+    line-height:1.2;
+
+    letter-spacing:2px;
+
+
+}
+
+
+.accueil h1 span {
+
+
+    color:#d4af37;
+
+    font-size:55px;
+
+
+}
+
+
+/* Bouton */
+
+.bouton {
+
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    border:1px solid white;
+
+    border-radius:40px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:0.4s;
+
+
+}
+
+
+.bouton:hover {
+
+
+    background:white;
+
+    color:#4c4038;
+
+
+}
+
+
+
+/* Animation */
+
+@keyframes apparition {
+
+
+from {
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
