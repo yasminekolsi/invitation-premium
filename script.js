@@ -34,6 +34,20 @@ const boutonOuverture = document.getElementById("ouvrirInvitation");
 
 boutonOuverture.addEventListener("click", function () {
 
+    // Fermer l'écran d'ouverture
     ecranOuverture.classList.add("fermer");
+
+    // Récupérer le contenu de l'invitation
+    const contenu = document.querySelector(".contenu");
+
+    // Arrêter l'ancienne animation
+    contenu.classList.add("rejouer-animation");
+
+    // Forcer le navigateur à réinitialiser l'animation
+    void contenu.offsetWidth;
+
+    // Relancer l'animation
+    contenu.classList.remove("rejouer-animation");
+    contenu.style.animation = "apparition 2s ease";
 
 });

@@ -34,9 +34,11 @@ body{
 
 
 .contenu {
-
     animation: apparition 2s ease;
+}
 
+.contenu.rejouer-animation {
+    animation: none;
 }
 
 
@@ -178,125 +180,139 @@ h1 span{
 }
 
 /* =========================
-   ENVELOPPE - PAGE OUVERTURE
+   ÉCRAN D'OUVERTURE
 ========================= */
 
-.page-ouverture {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background: #f7f1eb;
-}
-
-/* Enveloppe */
-
-.enveloppe {
-    position: relative;
-    width: 380px;
-    height: 250px;
-
-    margin-bottom: 50px;
-
-    perspective: 1000px;
-}
-
-/* Corps de l'enveloppe */
-
-.corps-enveloppe {
-    position: absolute;
+.ecran-ouverture {
+    position: fixed;
     inset: 0;
-
-    background: #e8d5c4;
-
-    border-radius: 5px;
-
-    z-index: 3;
-}
-
-/* Lettre qui sort de l'enveloppe */
-
-.lettre {
-    position: absolute;
-
-    width: 330px;
-    height: 210px;
-
-    left: 25px;
-    bottom: 20px;
-
-    background: white;
+    z-index: 9999;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     text-align: center;
+    overflow: hidden;
 
-    font-size: 24px;
+    background: #eee7df;
 
-    z-index: 2;
-
-    transition: transform 1.5s ease;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
 }
 
-/* Rabat */
 
-.rabat {
+/* Fond flou */
+
+.ecran-ouverture::before {
+    content: "";
+
     position: absolute;
+    inset: -30px;
 
-    top: 0;
-    left: 0;
+    background-image: url("images/image3.jpg");
+    background-size: cover;
+    background-position: center;
 
-    width: 0;
-    height: 0;
+    filter: blur(18px);
 
-    border-left: 190px solid transparent;
-    border-right: 190px solid transparent;
-    border-top: 135px solid #d6bda8;
+    transform: scale(1.1);
 
-    transform-origin: top center;
-
-    z-index: 4;
-
-    transition: transform 1.2s ease;
+    z-index: -2;
 }
+
+
+/* Voile blanc pour donner un effet doux */
+
+.ecran-ouverture::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    z-index: -1;
+}
+
+
+/* Contenu de l'ouverture */
+
+.ouverture-contenu {
+    color: #4c4038;
+
+    padding: 30px;
+
+    animation: ouvertureApparition 2s ease;
+}
+
+
+.ouverture-contenu h2 {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 65px;
+
+    font-weight: normal;
+
+    margin-bottom: 40px;
+}
+
 
 /* Bouton */
 
 #ouvrirInvitation {
+    background: rgba(255, 255, 255, 0.4);
+
+    color: #4c4038;
+
     border: 1px solid #8c7563;
 
-    background: transparent;
-
-    color: #5d4a3d;
-
-    padding: 13px 30px;
+    padding: 14px 32px;
 
     border-radius: 30px;
 
-    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
 
     cursor: pointer;
 
-    transition: 0.4s ease;
+    transition: all 0.4s ease;
 }
+
 
 #ouvrirInvitation:hover {
     background: #8c7563;
+
     color: white;
+
+    transform: translateY(-3px);
 }
 
-/* =========================
-   ANIMATION OUVERTURE
-========================= */
 
-.enveloppe.ouverte .rabat {
-    transform: rotateX(180deg);
+/* Disparition de la page */
+
+.ecran-ouverture.fermer {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
 }
 
-.enveloppe.ouverte .lettre {
-    transform: translateY(-130px);
+
+/* Animation du texte */
+
+@keyframes ouvertureApparition {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
+
