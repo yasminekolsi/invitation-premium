@@ -22,7 +22,6 @@ body {
 ========================= */
 
 .ecran-ouverture {
-
     position: fixed;
     inset: 0;
     z-index: 9999;
@@ -38,7 +37,6 @@ body {
 
     transition: opacity 1.5s ease, visibility 1.5s ease;
 }
-
 
 .ecran-ouverture::before {
 
@@ -57,9 +55,7 @@ body {
     transform:scale(1.1);
 
     z-index:-2;
-
 }
-
 
 .ecran-ouverture::after {
 
@@ -71,10 +67,7 @@ body {
     background:rgba(255,255,255,0.55);
 
     z-index:-1;
-
 }
-
-
 
 .ouverture-contenu {
 
@@ -83,10 +76,7 @@ body {
     padding:30px;
 
     animation:ouvertureApparition 2s ease;
-
 }
-
-
 
 .ouverture-contenu h2 {
 
@@ -97,10 +87,7 @@ body {
     font-weight:normal;
 
     margin-bottom:40px;
-
 }
-
-
 
 #ouvrirInvitation {
 
@@ -121,10 +108,7 @@ body {
     cursor:pointer;
 
     transition:all 0.4s ease;
-
 }
-
-
 
 #ouvrirInvitation:hover {
 
@@ -133,10 +117,7 @@ body {
     color:white;
 
     transform:translateY(-3px);
-
 }
-
-
 
 .ecran-ouverture.fermer {
 
@@ -145,10 +126,7 @@ body {
     visibility:hidden;
 
     pointer-events:none;
-
 }
-
-
 
 @keyframes ouvertureApparition {
 
@@ -159,22 +137,17 @@ body {
 
     }
 
-
     to {
 
         opacity:1;
         transform:translateY(0);
 
     }
-
 }
 
-
-
 /* =========================
-   PAGE DES MARIES
+   PAGE DES MARIÉS
 ========================= */
-
 
 .accueil {
 
@@ -188,26 +161,23 @@ body {
     url("images/image3.jpg");
 
     background-size:cover;
-
     background-repeat:no-repeat;
-
     background-position:center;
-
     background-attachment:fixed;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
 }
-
-
 
 .accueil .contenu {
 
-    transform:translateY(-50px);
-
     animation:apparition 2s ease;
-
 }
-
-
 
 .accueil h1 {
 
@@ -220,21 +190,14 @@ body {
     line-height:1.2;
 
     letter-spacing:2px;
-
 }
-
-
 
 .accueil h1 span {
 
     color:#d4af37;
 
     font-size:55px;
-
 }
-
-
-
 
 .bouton {
 
@@ -253,48 +216,36 @@ body {
     text-decoration:none;
 
     transition:0.4s;
-
 }
-
-
 
 .bouton:hover {
 
     background:white;
 
     color:#4c4038;
-
 }
-
-
-
 
 @keyframes apparition {
 
+    from {
 
-from {
+        opacity:0;
 
-    opacity:0;
+        transform:translateY(40px);
 
-    transform:translateY(40px);
+    }
 
-}
+    to {
 
+        opacity:1;
 
-to {
+        transform:translateY(0);
 
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
+    }
 }
 /* =========================
    NOTRE HISTOIRE
 ========================= */
-
 
 #histoire {
 
@@ -304,7 +255,7 @@ to {
     linear-gradient(
         rgba(255,255,255,0.75),
         rgba(255,255,255,0.75)
-),
+    ),
     url("images/image2.png");
 
     background-size:cover;
@@ -312,20 +263,14 @@ to {
     background-attachment:fixed;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
 
     text-align:center;
 
     padding:80px 20px;
-
 }
-
-
 
 #histoire h2 {
 
@@ -338,15 +283,11 @@ to {
     color:#8c7563;
 
     margin-bottom:40px;
-
 }
-
-
 
 #histoire img {
 
     width:350px;
-
     height:350px;
 
     object-fit:cover;
@@ -356,10 +297,7 @@ to {
     box-shadow:0 15px 35px rgba(0,0,0,0.15);
 
     margin-bottom:30px;
-
 }
-
-
 
 #histoire p {
 
@@ -370,10 +308,7 @@ to {
     line-height:1.8;
 
     color:#4c4038;
-
 }
-
-
 
 #histoire p:first-of-type {
 
@@ -384,48 +319,37 @@ to {
     font-weight:600;
 
     margin-bottom:15px;
-
 }
 
 
-
-
-
 /* =========================
-   FIANÇAILLES
+   FIANÇAILLES
 ========================= */
-
 
 #fiancailles {
 
     min-height:100vh;
 
     background:
-linear-gradient(
-    rgba(255,255,255,0.75),
-    rgba(255,255,255,0.75)
-),
-url("images/image2.png");
+    linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ),
+    url("images/image2.png");
 
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
 
     text-align:center;
 
     padding:80px 20px;
-
 }
-
-
 
 #fiancailles h2 {
 
@@ -436,15 +360,11 @@ background-attachment:fixed;
     color:#8c7563;
 
     margin-bottom:40px;
-
 }
-
-
 
 #fiancailles img {
 
     width:350px;
-
     height:350px;
 
     object-fit:cover;
@@ -454,10 +374,7 @@ background-attachment:fixed;
     box-shadow:0 15px 35px rgba(0,0,0,0.15);
 
     margin-bottom:30px;
-
 }
-
-
 
 #fiancailles .date {
 
@@ -466,10 +383,7 @@ background-attachment:fixed;
     color:#d4af37;
 
     font-weight:600;
-
 }
-
-
 
 #fiancailles p {
 
@@ -478,55 +392,39 @@ background-attachment:fixed;
     font-size:18px;
 
     line-height:1.8;
-
 }
-
-
-
 
 
 /* =========================
    MARIAGE
 ========================= */
 
-
 #mariage {
 
     min-height:100vh;
 
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ),
+    url("images/image2.png");
 
-background:
-linear-gradient(
-    rgba(255,255,255,0.75),
-    rgba(255,255,255,0.75)
-),
-url("images/image2.png");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
-color:#4c4038;
-
+    color:#4c4038;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
 
     text-align:center;
 
-
     padding:80px 20px;
-
 }
-
-
-
 
 #mariage h2 {
 
@@ -537,10 +435,7 @@ color:#4c4038;
     font-weight:normal;
 
     margin-bottom:30px;
-
 }
-
-
 
 #mariage h3 {
 
@@ -553,18 +448,12 @@ color:#4c4038;
     line-height:1.2;
 
     margin-bottom:25px;
-
 }
-
-
 
 #mariage span {
 
     color:#d4af37;
-
 }
-
-
 
 .date-mariage {
 
@@ -573,15 +462,10 @@ color:#4c4038;
     color:#d4af37;
 
     margin-bottom:40px;
-
 }
 
 
-
-
-
-/* COMPTE A REBOURS */
-
+/* COMPTE À REBOURS */
 
 .compte-a-rebours {
 
@@ -592,57 +476,40 @@ color:#4c4038;
     gap:25px;
 
     margin-bottom:40px;
-
 }
-
-
 
 .compte-a-rebours div {
 
-    background:rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.3);
 
     padding:20px;
 
     border-radius:15px;
-
 }
-
-
 
 .compte-a-rebours span {
 
     font-size:35px;
 
     font-weight:bold;
-
 }
-
-
 
 .compte-a-rebours small {
 
     display:block;
 
     margin-top:5px;
-
 }
 
 
-
-
-
 /* ADRESSE */
-
 
 .adresse {
 
     font-size:20px;
 
     margin-bottom:30px;
-
 }
-
-
 
 #mariage iframe {
 
@@ -655,219 +522,278 @@ color:#4c4038;
     border:none;
 
     border-radius:20px;
-
 }
-
-
-
-
 
 
 /* =========================
    VERSION MOBILE
 ========================= */
 
-
 @media (max-width:768px) {
 
-
-
-    /* ouverture */
-
     .ouverture-contenu h2 {
-
         font-size:45px;
-
     }
 
-
-
-    /* page noms */
-
-    .accueil .contenu{
-    transform:translateY(-80px);
-}
-
+    .accueil {
+        background-attachment:scroll;
+    }
 
     .accueil h1 {
-
         font-size:45px;
-
     }
-
-
 
     .accueil h1 span {
-
         font-size:35px;
-
     }
-
-
 
     .bouton {
-
         padding:12px 25px;
-
         margin-top:25px;
-
     }
-
-
-
-
-
-    /* histoire */
 
     #histoire,
-    #fiancailles {
-
-        padding:30px 20px;
-
+    #fiancailles,
+    #mariage {
+        padding:40px 20px;
+        background-attachment:scroll;
     }
-
 
 
     #histoire h2,
-    #fiancailles h2 {
-
+    #fiancailles h2,
+    #mariage h2 {
         font-size:38px;
-
-        margin-bottom:15px;
-
     }
 
-
+    #mariage h3 {
+        font-size:50px;
+    }
 
     #histoire img,
     #fiancailles img {
-
         width:180px;
-
         height:180px;
-
-        margin-bottom:10px;
-
+        margin-bottom:15px;
     }
-
-
 
     #histoire p,
     #fiancailles p {
-
         font-size:15px;
-
         line-height:1.5;
-
     }
-
-
-
-
-
-    /* mariage */
-
-    #mariage {
-
-        padding:40px 15px;
-
-    }
-
-
-
-    #mariage h2 {
-
-        font-size:40px;
-
-    }
-
-
-
-    #mariage h3 {
-
-        font-size:50px;
-
-    }
-
-
 
     .date-mariage {
-
         font-size:22px;
-
     }
-
-
 
     .compte-a-rebours {
-
         flex-wrap:wrap;
-
         gap:10px;
-
     }
-
-
 
     .compte-a-rebours div {
-
         width:80px;
-
         padding:12px;
-
     }
-
-
 
     .compte-a-rebours span {
-
         font-size:24px;
-
     }
-
-
 
     .adresse {
-
         font-size:16px;
-
     }
-
-
 
     #mariage iframe {
-
         width:100%;
-
         height:250px;
-
     }
-
 }
 
-@media (max-width:768px){
+/* =========================
+   PROGRAMME
+========================= */
 
-    .accueil {
+#programme {
 
-        background-size:cover;
+    min-height:100vh;
 
-        background-position:center center;
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ),
+    url("images/image2.png");
 
-        background-attachment:scroll;
+    background-size:cover;
+    background-position:center;
 
-    }
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
+    text-align:center;
+
+    padding:80px 20px;
 }
 
-@media (max-width:768px){
+#programme h2 {
 
-    .accueil{
-        align-items:center;
-    }
+    font-family:'Great Vibes', cursive;
 
-    .accueil .contenu{
-        transform:translateY(-50px);
-        margin-top:40px;
-    }
+    font-size:65px;
 
+    color:#8c7563;
+
+    margin-bottom:50px;
+}
+
+.etape {
+
+    background:white;
+
+    width:90%;
+    max-width:500px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+    margin-bottom:25px;
+}
+
+.etape h3 {
+
+    color:#d4af37;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.etape p {
+
+    color:#4c4038;
+
+    font-size:18px;
+}
+
+/* =========================
+   RSVP
+========================= */
+
+#rsvp {
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ),
+    url("images/image2.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+#rsvp h2,
+#remerciement h2 {
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:65px;
+
+    color:#8c7563;
+
+    margin-bottom:40px;
+}
+
+#rsvp p,
+#remerciement p {
+
+    max-width:700px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#4c4038;
+
+    margin-bottom:20px;
+}
+
+.bouton-rsvp {
+
+    margin-top:20px;
+
+    padding:15px 35px;
+
+    background:#8c7563;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:0.4s;
+}
+
+.bouton-rsvp:hover {
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   REMERCIEMENTS
+========================= */
+
+#remerciement {
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.80),
+        rgba(255,255,255,0.80)
+    ),
+    url("images/image2.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+#remerciement h3 {
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:60px;
+
+    color:#d4af37;
+
+    margin-top:30px;
 }
