@@ -1,8 +1,28 @@
 /* =========================
+   RÉINITIALISATION
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================
    ÉCRAN D'OUVERTURE
 ========================= */
 
 .ecran-ouverture {
+
     position: fixed;
     inset: 0;
     z-index: 9999;
@@ -19,115 +39,142 @@
     transition: opacity 1.5s ease, visibility 1.5s ease;
 }
 
-/* Fond flou */
 
 .ecran-ouverture::before {
-    content: "";
 
-    position: absolute;
-    inset: -30px;
+    content:"";
 
-    background-image: url("images/image3.jpg");
-    background-size: cover;
-    background-position: center;
+    position:absolute;
+    inset:-30px;
 
-    filter: blur(18px);
+    background-image:url("images/image3.jpg");
 
-    transform: scale(1.1);
+    background-size:cover;
+    background-position:center;
 
-    z-index: -2;
+    filter:blur(18px);
+
+    transform:scale(1.1);
+
+    z-index:-2;
+
 }
 
-/* Voile blanc */
 
 .ecran-ouverture::after {
-    content: "";
 
-    position: absolute;
-    inset: 0;
+    content:"";
 
-    background: rgba(255, 255, 255, 0.55);
+    position:absolute;
+    inset:0;
 
-    z-index: -1;
+    background:rgba(255,255,255,0.55);
+
+    z-index:-1;
+
 }
 
-/* Contenu */
+
 
 .ouverture-contenu {
-    color: #4c4038;
 
-    padding: 30px;
+    color:#4c4038;
 
-    animation: ouvertureApparition 2s ease;
+    padding:30px;
+
+    animation:ouvertureApparition 2s ease;
+
 }
+
+
 
 .ouverture-contenu h2 {
-    font-family: 'Great Vibes', cursive;
 
-    font-size: 65px;
+    font-family:'Great Vibes', cursive;
 
-    font-weight: normal;
+    font-size:65px;
 
-    margin-bottom: 40px;
+    font-weight:normal;
+
+    margin-bottom:40px;
+
 }
 
-/* Bouton */
+
 
 #ouvrirInvitation {
-    background: rgba(255, 255, 255, 0.4);
 
-    color: #4c4038;
+    background:rgba(255,255,255,0.4);
 
-    border: 1px solid #8c7563;
+    color:#4c4038;
 
-    padding: 14px 32px;
+    border:1px solid #8c7563;
 
-    border-radius: 30px;
+    padding:14px 32px;
 
-    font-family: 'Poppins', sans-serif;
+    border-radius:30px;
 
-    font-size: 15px;
+    font-family:'Poppins',sans-serif;
 
-    cursor: pointer;
+    font-size:15px;
 
-    transition: all 0.4s ease;
+    cursor:pointer;
+
+    transition:all 0.4s ease;
+
 }
+
+
 
 #ouvrirInvitation:hover {
-    background: #8c7563;
 
-    color: white;
+    background:#8c7563;
 
-    transform: translateY(-3px);
+    color:white;
+
+    transform:translateY(-3px);
+
 }
 
-/* Disparition */
+
 
 .ecran-ouverture.fermer {
-    opacity: 0;
 
-    visibility: hidden;
+    opacity:0;
 
-    pointer-events: none;
+    visibility:hidden;
+
+    pointer-events:none;
+
 }
 
-/* Animation */
+
 
 @keyframes ouvertureApparition {
+
     from {
-        opacity: 0;
-        transform: translateY(25px);
+
+        opacity:0;
+        transform:translateY(25px);
+
     }
 
+
     to {
-        opacity: 1;
-        transform: translateY(0);
+
+        opacity:1;
+        transform:translateY(0);
+
     }
+
 }
+
+
 
 /* =========================
    PAGE DES MARIES
 ========================= */
+
 
 .accueil {
 
@@ -145,6 +192,9 @@
 
     background-position:center;
 
+    background-attachment:fixed;
+
+
     display:flex;
 
     justify-content:center;
@@ -158,21 +208,20 @@
 }
 
 
-/* Animation du contenu */
 
-.contenu {
+.accueil .contenu {
 
-    animation: apparition 2s ease;
+    transform:translateY(-50px);
+
+    animation:apparition 2s ease;
 
 }
 
 
-/* Noms des mariés */
 
 .accueil h1 {
 
-
-    font-family:'Great Vibes', cursive;
+    font-family:'Great Vibes',cursive;
 
     font-size:85px;
 
@@ -182,25 +231,22 @@
 
     letter-spacing:2px;
 
-
 }
 
 
-.accueil h1 span {
 
+.accueil h1 span {
 
     color:#d4af37;
 
     font-size:55px;
 
-
 }
 
 
-/* Bouton */
+
 
 .bouton {
-
 
     display:inline-block;
 
@@ -216,27 +262,22 @@
 
     text-decoration:none;
 
-    font-family:'Poppins',sans-serif;
-
     transition:0.4s;
-
 
 }
 
 
-.bouton:hover {
 
+.bouton:hover {
 
     background:white;
 
     color:#4c4038;
 
-
 }
 
 
 
-/* Animation */
 
 @keyframes apparition {
 
@@ -260,10 +301,10 @@ to {
 
 
 }
-
 /* =========================
    NOTRE HISTOIRE
 ========================= */
+
 
 #histoire {
 
@@ -286,9 +327,10 @@ to {
 }
 
 
+
 #histoire h2 {
 
-    font-family:'Great Vibes', cursive;
+    font-family:'Great Vibes',cursive;
 
     font-size:65px;
 
@@ -346,6 +388,10 @@ to {
 
 }
 
+
+
+
+
 /* =========================
    FIANÇAILLES
 ========================= */
@@ -375,7 +421,7 @@ to {
 
 #fiancailles h2 {
 
-    font-family:'Great Vibes', cursive;
+    font-family:'Great Vibes',cursive;
 
     font-size:65px;
 
@@ -416,6 +462,7 @@ to {
 }
 
 
+
 #fiancailles p {
 
     max-width:700px;
@@ -426,13 +473,19 @@ to {
 
 }
 
+
+
+
+
 /* =========================
    MARIAGE
 ========================= */
 
+
 #mariage {
 
-    min-height: 100vh;
+    min-height:100vh;
+
 
     background:
     linear-gradient(
@@ -441,107 +494,351 @@ to {
     ),
     url("images/image3.jpg");
 
-    background-size: cover;
-    background-position: center;
 
-    color: white;
+    background-size:cover;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-position:center;
 
-    text-align: center;
+    background-attachment:fixed;
 
-    padding: 80px 20px;
+
+    color:white;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    padding:80px 20px;
+
 }
+
+
+
 
 #mariage h2 {
 
-    font-family: 'Great Vibes', cursive;
+    font-family:'Great Vibes',cursive;
 
-    font-size: 60px;
+    font-size:60px;
 
-    font-weight: normal;
+    font-weight:normal;
 
-    margin-bottom: 30px;
+    margin-bottom:30px;
+
 }
+
+
 
 #mariage h3 {
 
-    font-family: 'Great Vibes', cursive;
+    font-family:'Great Vibes',cursive;
 
-    font-size: 70px;
+    font-size:70px;
 
-    font-weight: normal;
+    font-weight:normal;
 
-    line-height: 1.2;
+    line-height:1.2;
 
-    margin-bottom: 25px;
+    margin-bottom:25px;
+
 }
+
+
 
 #mariage span {
 
-    color: #d4af37;
+    color:#d4af37;
+
 }
+
+
 
 .date-mariage {
 
-    font-size: 28px;
+    font-size:28px;
 
-    color: #d4af37;
+    color:#d4af37;
 
-    margin-bottom: 40px;
+    margin-bottom:40px;
+
 }
+
+
+
+
+
+/* COMPTE A REBOURS */
+
 
 .compte-a-rebours {
 
-    display: flex;
+    display:flex;
 
-    gap: 25px;
+    justify-content:center;
 
-    margin-bottom: 40px;
+    gap:25px;
+
+    margin-bottom:40px;
+
 }
+
+
 
 .compte-a-rebours div {
 
-    background: rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.2);
 
-    padding: 20px;
+    padding:20px;
 
-    border-radius: 15px;
+    border-radius:15px;
+
 }
+
+
 
 .compte-a-rebours span {
 
-    font-size: 35px;
+    font-size:35px;
 
-    font-weight: bold;
+    font-weight:bold;
+
 }
+
+
 
 .compte-a-rebours small {
 
-    display: block;
+    display:block;
 
-    margin-top: 5px;
+    margin-top:5px;
+
 }
+
+
+
+
+
+/* ADRESSE */
+
 
 .adresse {
 
-    font-size: 20px;
+    font-size:20px;
 
-    margin-bottom: 30px;
+    margin-bottom:30px;
+
 }
+
+
 
 #mariage iframe {
 
-    width: 90%;
+    width:90%;
 
-    max-width: 800px;
+    max-width:800px;
 
-    height: 350px;
+    height:350px;
 
-    border: none;
+    border:none;
 
-    border-radius: 20px;
+    border-radius:20px;
+
+}
+
+
+
+
+
+
+/* =========================
+   VERSION MOBILE
+========================= */
+
+
+@media (max-width:768px) {
+
+
+
+    /* ouverture */
+
+    .ouverture-contenu h2 {
+
+        font-size:45px;
+
+    }
+
+
+
+    /* page noms */
+
+    .accueil .contenu {
+
+        transform:translateY(-80px);
+
+    }
+
+
+    .accueil h1 {
+
+        font-size:50px;
+
+    }
+
+
+
+    .accueil h1 span {
+
+        font-size:35px;
+
+    }
+
+
+
+    .bouton {
+
+        padding:12px 25px;
+
+        margin-top:25px;
+
+    }
+
+
+
+
+
+    /* histoire */
+
+    #histoire,
+    #fiancailles {
+
+        padding:30px 20px;
+
+    }
+
+
+
+    #histoire h2,
+    #fiancailles h2 {
+
+        font-size:38px;
+
+        margin-bottom:15px;
+
+    }
+
+
+
+    #histoire img,
+    #fiancailles img {
+
+        width:180px;
+
+        height:180px;
+
+        margin-bottom:10px;
+
+    }
+
+
+
+    #histoire p,
+    #fiancailles p {
+
+        font-size:15px;
+
+        line-height:1.5;
+
+    }
+
+
+
+
+
+    /* mariage */
+
+    #mariage {
+
+        padding:40px 15px;
+
+    }
+
+
+
+    #mariage h2 {
+
+        font-size:40px;
+
+    }
+
+
+
+    #mariage h3 {
+
+        font-size:50px;
+
+    }
+
+
+
+    .date-mariage {
+
+        font-size:22px;
+
+    }
+
+
+
+    .compte-a-rebours {
+
+        flex-wrap:wrap;
+
+        gap:10px;
+
+    }
+
+
+
+    .compte-a-rebours div {
+
+        width:80px;
+
+        padding:12px;
+
+    }
+
+
+
+    .compte-a-rebours span {
+
+        font-size:24px;
+
+    }
+
+
+
+    .adresse {
+
+        font-size:16px;
+
+    }
+
+
+
+    #mariage iframe {
+
+        width:100%;
+
+        height:250px;
+
+    }
+
 }
