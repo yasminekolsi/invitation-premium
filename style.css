@@ -425,3 +425,123 @@ to {
     line-height:1.8;
 
 }
+
+/* =========================
+   MARIAGE
+========================= */
+
+#mariage {
+
+    min-height: 100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("images/image3.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+#mariage h2 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 60px;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+#mariage h3 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 70px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+#mariage span {
+
+    color: #d4af37;
+}
+
+.date-mariage {
+
+    font-size: 28px;
+
+    color: #d4af37;
+
+    margin-bottom: 40px;
+}
+
+.compte-a-rebours {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+.compte-a-rebours div {
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+.compte-a-rebours span {
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+.compte-a-rebours small {
+
+    display: block;
+
+    margin-top: 5px;
+}
+
+.adresse {
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+#mariage iframe {
+
+    width: 90%;
+
+    max-width: 800px;
+
+    height: 350px;
+
+    border: none;
+
+    border-radius: 20px;
+}
