@@ -684,16 +684,14 @@ color:#4c4038;
 
     /* page noms */
 
-    .accueil .contenu {
-
-        transform:translateY(-80px);
-
-    }
+    .accueil .contenu{
+    transform:translateY(-20px);
+}
 
 
     .accueil h1 {
 
-        font-size:50px;
+        font-size:45px;
 
     }
 
