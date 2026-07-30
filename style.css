@@ -685,7 +685,7 @@ color:#4c4038;
     /* page noms */
 
     .accueil .contenu{
-    transform:translateY(-20px);
+    transform:translateY(-80px);
 }
 
 
@@ -855,6 +855,19 @@ color:#4c4038;
 
         background-attachment:scroll;
 
+    }
+
+}
+
+@media (max-width:768px){
+
+    .accueil{
+        align-items:center;
+    }
+
+    .accueil .contenu{
+        transform:translateY(-50px);
+        margin-top:40px;
     }
 
 }
