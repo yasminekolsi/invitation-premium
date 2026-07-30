@@ -188,7 +188,9 @@ body {
     url("images/image3.jpg");
 
 
-    background-size:cover;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-color:#000;
 
     background-position:center;
 
@@ -310,7 +312,16 @@ to {
 
     min-height:100vh;
 
-    background:#fffaf6;
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+),
+    url("images/image2.png");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 
     display:flex;
 
@@ -401,7 +412,16 @@ to {
 
     min-height:100vh;
 
-    background:#f5eee7;
+    background:
+linear-gradient(
+    rgba(255,255,255,0.75),
+    rgba(255,255,255,0.75)
+),
+url("images/image2.png");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
     display:flex;
 
@@ -487,22 +507,18 @@ to {
     min-height:100vh;
 
 
-    background:
-    linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
-    ),
-    url("images/image3.jpg");
+background:
+linear-gradient(
+    rgba(255,255,255,0.75),
+    rgba(255,255,255,0.75)
+),
+url("images/image2.png");
 
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
-
-
-    color:white;
+color:#4c4038;
 
 
     display:flex;
