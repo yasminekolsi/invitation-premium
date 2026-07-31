@@ -1,11 +1,25 @@
+// Écran d'ouverture + musique
+
 const ecranOuverture = document.getElementById("ecranOuverture");
 const boutonOuverture = document.getElementById("ouvrirInvitation");
+const musique = document.getElementById("musique");
+
 
 boutonOuverture.addEventListener("click", function () {
+
+    // Fermer l'écran d'ouverture
     ecranOuverture.classList.add("fermer");
+
+    // Démarrer la musique
+    musique.play();
+
 });
 
+
+// Compte à rebours
+
 const dateMariage = new Date("2026-12-15T18:00:00").getTime();
+
 
 function compteARebours() {
 
@@ -13,18 +27,37 @@ function compteARebours() {
 
     const difference = dateMariage - maintenant;
 
-    document.getElementById("jours").textContent =
-        Math.floor(difference / (1000 * 60 * 60 * 24));
 
-    document.getElementById("heures").textContent =
-        Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const jours = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
 
-    document.getElementById("minutes").textContent =
-        Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 
-    document.getElementById("secondes").textContent =
-        Math.floor((difference % (1000 * 60)) / 1000);
+    const heures = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+
+    const minutes = Math.floor(
+        (difference % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+
+    const secondes = Math.floor(
+        (difference % (1000 * 60)) /
+        1000
+    );
+
+
+    document.getElementById("jours").textContent = jours;
+    document.getElementById("heures").textContent = heures;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("secondes").textContent = secondes;
+
 }
+
 
 compteARebours();
 
